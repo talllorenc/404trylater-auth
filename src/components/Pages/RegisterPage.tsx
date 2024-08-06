@@ -1,33 +1,33 @@
-import LoginForm from "@/components/Forms/LoginForm";
+import RegisterForm from "../Forms/RegisterForm";
 import SotialsAuth from "../SotialsAuth/SotialsAuth";
 import Link from "next/link";
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <div
-      className="flex flex-col max-w-md mx-auto rounded-xl overflow-hidden text-black border border-neutral-200 shadow-buttonDark"
+      className="flex flex-col max-w-md mx-auto rounded-xl overflow-hidden text-black border-neutral-200 shadow-buttonDark"
     >
       <div className="flex flex-col gap-8 bg-white p-8 border-b border-neutral-200">
         <div className="flex flex-col items-center justify-center text-center">
-          <p className="text-lg font-bold">Sign in to 404TryLater</p>
+          <p className="text-lg font-bold">Create your account</p>
           <p className="text-neutral-500">
-            Welcome back! Please sign in to continue
+            Welcome! Please fill in the details to get started.
           </p>
         </div>
 
         <SotialsAuth />
 
-        <LoginForm />
+        <RegisterForm />
       </div>
 
       <div className="flex items-center justify-center bg-neutral-100 p-4">
         <span className="text-neutral-500 text-center">
-          Don’t have an account?
+          Already have an account?
           <Link
-            href="/sign-up"
+            href="/sign-in"
             className="font-medium ml-2 hover:underline text-black"
           >
-            Sign up
+            Sign in
           </Link>
         </span>
       </div>
@@ -35,4 +35,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

@@ -1,6 +1,6 @@
 import React from "react";
 
-interface ButtonProps {
+interface ISubmitButtonProps {
   text: string;
   buttonColor?: string;
   textColor?: string;
@@ -8,7 +8,7 @@ interface ButtonProps {
   icon?: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const SubmitButton: React.FC<ISubmitButtonProps> = ({
   text,
   buttonColor = "black",
   textColor = "white",
@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
         background: backgroundStyle,
         color: textColor,
       }}
-      className="flex items-center justify-center gap-2 w-full py-1 rounded-lg hover:opacity-90 transition-all duration-200"
+      className="flex items-center justify-center gap-2 border border-neutral-900 w-full py-1 rounded-lg hover:opacity-90 transition-all duration-200"
     >
       <span>{text}</span>
       {icon && <div>{icon}</div>}
@@ -33,4 +33,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export default SubmitButton;

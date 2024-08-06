@@ -18,7 +18,7 @@ const config: Config = {
         xl: "1280px",
       },
       boxShadow: {
-        buttonDark: "2px 2px 7px 1px rgba(28,28,28, 1)",
+        buttonDark: "2px 2px 7px 1px rgba(28,28,28, 0.1)",
         buttonPinkBrick: "0px 0px 7px 4px rgba(241,156,187, 1)",
       },
       keyframes: {

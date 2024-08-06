@@ -1,10 +1,17 @@
 import Button from "@/components/UI/SubmitButton";
-import { FaCaretRight, FaEnvelope, FaUnlock } from "react-icons/fa";
+import { FaUser, FaCaretRight, FaEnvelope, FaUnlock, FaLock } from "react-icons/fa";
 import Input from "../UI/Input";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   return (
     <form className="flex flex-col gap-4">
+      <Input
+        id="username"
+        label="Username"
+        type="text"
+        placeholder="username"
+        icon={<FaUser />}
+      />
       <Input
         id="email"
         label="Email address"
@@ -20,8 +27,16 @@ const LoginForm = () => {
         icon={<FaUnlock />}
       />
 
+      <Input
+        id="confirmPassword"
+        label="Confirm password"
+        type="password"
+        placeholder="******"
+        icon={<FaLock />}
+      />
+
       <Button
-        text="Log in"
+        text="Sign up"
         gradient={["#434343", "#000000"]}
         textColor="white"
         icon={<FaCaretRight />}
@@ -30,4 +45,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

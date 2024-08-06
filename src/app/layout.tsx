@@ -1,6 +1,7 @@
 import { Fira_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import Navbar from "@/components/Navbar/Navbar";
 
 const firaMono = Fira_Mono({
   subsets: ["cyrillic", "latin"],
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={firaMono.className}>{children}</body>
+      <body className={firaMono.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
